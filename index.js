@@ -54,7 +54,7 @@ var employee_tracker = function () {
             }]).then((answers) => {
                 db.query(`INSERT INTO department (name) VALUES (?)`, [answers.department], (err, result) => {
                     if (err) throw err;
-                    console.log(`Added ${answers.department} to the database.`)
+                    console.log(`Added ${answers.department} to the Database.`)
                     employee_tracker();
                 });
             })
@@ -115,7 +115,7 @@ var employee_tracker = function () {
 
                     db.query(`INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)`, [answers.role, answers.salary, department.id], (err, result) => {
                         if (err) throw err;
-                        console.log(`Added ${answers.role} to the database.`)
+                        console.log(`Added ${answers.role} to the Database.`)
                         employee_tracker();
                     });
                 })
@@ -191,7 +191,7 @@ var employee_tracker = function () {
 
                     db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)`, [answers.firstName, answers.lastName, role.id, answers.manager.id], (err, result) => {
                         if (err) throw err;
-                        console.log(`Added ${answers.firstName} ${answers.lastName} to the database.`)
+                        console.log(`Added ${answers.firstName} ${answers.lastName} to the Database.`)
                         employee_tracker();
                     });
                 })
@@ -246,7 +246,7 @@ var employee_tracker = function () {
 
                     db.query(`UPDATE employee SET ? WHERE ?`, [{role_id: role}, {last_name: name}], (err, result) => {
                         if (err) throw err;
-                        console.log(`Updated ${answers.employee} role to the database.`)
+                        console.log(`Updated ${answers.employee} role to the Database.`)
                         employee_tracker();
                     });
                 })

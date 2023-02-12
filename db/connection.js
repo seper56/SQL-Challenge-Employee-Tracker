@@ -2,12 +2,12 @@ const mysql = require('mysql2');
 //require('dotenv').config();
 
 const db = mysql.createConnection({
-    host: 'localhost3306',
-    // Your MySQL username,
+    host: 'localhost',
+    port: '3306',
     user: 'root',
     // Your MySQL password
-    password: '60DGmO7!54rgXtR',
-    database: 'employee_tracker_db'
+    password: 'AB89ewqs$',
+    Database: ''
 });
 
 module.exports = db;
